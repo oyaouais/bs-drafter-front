@@ -1,23 +1,21 @@
-node_modules
+```
+# Dependencies
+node_modules/
 
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
+# Logs and temp files
+*.log
+*.tmp
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Env
+# Environment
 .env
-.env.*
-!.env.example
-!.env.test
+.env.local
+*.env.*
 
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+# Editors
+.vscode/
+.idea/
+
+# Build outputs
+dist/
+build/
+```
