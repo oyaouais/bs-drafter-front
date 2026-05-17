@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9016bf8d-194d-4810-8a93-17a2466ab243" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/BrawlersList.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/DraftState.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/data/brawlers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/data/maps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/data/mockDraft.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/lilitaone-regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/maps/double-swoosh.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="9016bf8d-194d-4810-8a93-17a2466ab243" name="Changes" comment="feat: draft state:&#10; - current map, map name, brawler bans and picks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,8 +128,17 @@
       <workItem from="1778419632390" duration="2594000" />
       <workItem from="1778675501284" duration="615000" />
       <workItem from="1779001081667" duration="279000" />
-      <workItem from="1779001406924" duration="1679000" />
+      <workItem from="1779001406924" duration="2010000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: draft state:&#10; - current map, map name, brawler bans and picks">
+      <option name="closed" value="true" />
+      <created>1779004325574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779004325574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,5 +149,20 @@
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="javascript:npm:vite" />
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: draft state:&#10; - current map, map name, brawler bans and picks" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: draft state:&#10; - current map, map name, brawler bans and picks" />
   </component>
 </project>
