@@ -1,28 +1,17 @@
 <script lang="ts">
-import DraftState from '$lib/components/DraftState.svelte';
-import BrawlersList from '$lib/components/BrawlersList.svelte';
-
-import { draft } from '$lib/data/mockDraft';
-import { brawlers } from '$lib/data/brawlers';
+	import DraftState from '$lib/components/DraftState.svelte';
+	import { draft } from '$lib/data/mockDraft';
 </script>
 
-<div class="draft-state">
-<DraftState draft={draft} />
-</div>
-
-<div class="brawlers-list-container">
-<BrawlersList brawlers={brawlers} />
+<div class="page">
+	<DraftState {draft} />
 </div>
 
 <style>
-.draft-state {
-display: flex;
-justify-content: center;
-padding-top: 20px;
-}
-
-.brawlers-list-container {
-display: flex;
-justify-content: center;
-}
+	.page {
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+	}
 </style>

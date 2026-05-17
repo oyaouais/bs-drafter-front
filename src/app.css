@@ -1,18 +1,37 @@
 @font-face {
-    font-family: 'Lilita One';
+	font-family: 'Lilita One';
+	src: url('/fonts/lilitaone-regular-webfont.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
 
-    src: url('/fonts/lilitaone-regular-webfont.ttf')
-    format('truetype');
+:root {
+	--bs-bg: #0d0d12;
+	--bs-surface: #1a1a24;
+	--bs-border: #2e2e40;
+	--bs-blue: #3b82f6;
+	--bs-blue-glow: rgba(59, 130, 246, 0.5);
+	--bs-blue-dark: #2563eb;
+	--bs-red: #ef4444;
+	--bs-green: #22c55e;
+	--bs-text: #f1f5f9;
+	--bs-text-muted: #94a3b8;
+}
 
-    font-weight: 400;
-    font-style: normal;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+	background: var(--bs-bg);
+	color: var(--bs-text);
+	font-family: 'Lilita One', sans-serif;
+	min-height: 100vh;
+}
 
-    background: #111;
-    color: white;
-
-    font-family: 'Lilita One', sans-serif;
+::selection {
+	background: var(--bs-blue);
+	color: white;
 }
