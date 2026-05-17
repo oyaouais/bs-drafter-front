@@ -1,21 +1,30 @@
-```
+```svelte
+# Svelte build artifacts
+.svelte-kit/
+.caches/
+
 # Dependencies
 node_modules/
 
-# Logs and temp files
-*.log
-*.tmp
-
-# Environment
+# Environment variables
 .env
 .env.local
-*.env.*
+.env.*
 
-# Editors
+# IDE files
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
 
 # Build outputs
 dist/
 build/
+public/build/
 ```

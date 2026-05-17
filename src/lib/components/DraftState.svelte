@@ -37,10 +37,10 @@
 </script>
 
 <section class="draft-container">
-	<!-- Main Board: Left (Ally) | Center (Map) | Right (Enemy) -->
+	<!-- Main Board: Left to Right: Ally Bans | Ally Picks | Map (fullsize) | Enemy Picks | Enemy Bans -->
 	<div class="draft-board">
-		<!-- Left Side: Ally Bans + Picks (vertical) -->
-		<div class="side ally-side">
+		<!-- Ally Bans -->
+		<div class="side ally-bans-side">
 			<div class="bans-section">
 				<div class="section-title ban-title">BANS</div>
 				<div class="bans-col">
@@ -53,7 +53,10 @@
 					{/each}
 				</div>
 			</div>
+		</div>
 
+		<!-- Ally Picks -->
+		<div class="side ally-picks-side">
 			<div class="picks-section">
 				<div class="section-title pick-title">PICKS</div>
 				<div class="picks-col">
@@ -73,10 +76,10 @@
 			</div>
 		</div>
 
-		<!-- Center: Map + VS -->
+		<!-- Center: Full-size Map with Name and Gamemode Under It -->
 		<div class="center-section">
 			<div class="map-section">
-				<div class="map-card">
+				<div class="map-card fullsize">
 					<img src={draft.map.image} alt={draft.map.name} class="map-image" />
 					<div class="map-overlay"></div>
 				</div>
@@ -85,29 +88,10 @@
 					{draft.map.mode}
 				</div>
 			</div>
-
-			<div class="vs-section">
-				<div class="vs-line"></div>
-				<span class="vs-text">VS</span>
-				<div class="vs-line"></div>
-			</div>
 		</div>
 
-		<!-- Right Side: Enemy Bans + Picks (vertical) -->
-		<div class="side enemy-side">
-			<div class="bans-section">
-				<div class="section-title ban-title">BANS</div>
-				<div class="bans-col">
-					{#each draft.enemy.bans as ban}
-						<div class="ban-slot">
-							{#if ban}
-								<img src={ban.icon} alt={ban.name} title={ban.name} />
-							{/if}
-						</div>
-					{/each}
-				</div>
-			</div>
-
+		<!-- Enemy Picks -->
+		<div class="side enemy-picks-side">
 			<div class="picks-section">
 				<div class="section-title pick-title">PICKS</div>
 				<div class="picks-col">
@@ -126,9 +110,25 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Enemy Bans -->
+		<div class="side enemy-bans-side">
+			<div class="bans-section">
+				<div class="section-title ban-title">BANS</div>
+				<div class="bans-col">
+					{#each draft.enemy.bans as ban}
+						<div class="ban-slot">
+							{#if ban}
+								<img src={ban.icon} alt={ban.name} title={ban.name} />
+							{/if}
+						</div>
+					{/each}
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<!-- Bottom: Horizontally scrolling Brawlers List -->
+	<!-- Bottom: Scrollable Brawlers List (3-4 rows) -->
 	<div class="brawlers-section">
 		<div class="brawlers-header">CHOOSE YOUR BRAWLER</div>
 		<div class="brawlers-scroll">
@@ -149,12 +149,12 @@
 		margin: 0 auto;
 	}
 
-	/* ========== DRAFT BOARD (3 columns) ========== */
+	/* ========== DRAFT BOARD (5 columns) ========== */
 	.draft-board {
 		display: flex;
 		align-items: stretch;
 		justify-content: center;
-		gap: 32px;
+		gap: 24px;
 		width: 100%;
 		flex: 1;
 	}
@@ -164,8 +164,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 24px;
-		min-width: 100px;
+		gap: 16px;
+		min-width: 80px;
 		padding-top: 8px;
 	}
 
@@ -282,8 +282,8 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
-		flex: 1;
-		max-width: 360px;
+		flex: 1.5;
+		max-width: 480px;
 	}
 
 	/* Map */
@@ -291,17 +291,22 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 8px;
+		gap: 12px;
 	}
 
 	.map-card {
 		position: relative;
-		width: 300px;
-		height: 170px;
+		width: 400px;
+		height: 225px;
 		border-radius: 20px;
 		overflow: hidden;
 		border: 3px solid #2e2e40;
 		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+	}
+
+	.map-card.fullsize {
+		width: 480px;
+		height: 270px;
 	}
 
 	.map-image {
@@ -375,28 +380,7 @@
 
 	.brawlers-scroll {
 		width: 100%;
-		overflow-x: auto;
-		overflow-y: hidden;
-		padding: 8px 4px;
-		scrollbar-width: thin;
-		scrollbar-color: #3b82f6 #1a1a24;
-	}
-
-	.brawlers-scroll::-webkit-scrollbar {
-		height: 8px;
-	}
-
-	.brawlers-scroll::-webkit-scrollbar-track {
-		background: #1a1a24;
-		border-radius: 4px;
-	}
-
-	.brawlers-scroll::-webkit-scrollbar-thumb {
-		background: #3b82f6;
-		border-radius: 4px;
-	}
-
-	.brawlers-scroll::-webkit-scrollbar-thumb:hover {
-		background: #2563eb;
+		overflow: hidden;
+		padding: 0;
 	}
 </style>
